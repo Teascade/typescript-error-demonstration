@@ -1,7 +1,14 @@
 import Joi from "joi";
 
-/** @type {Joi.Extension} */
-export const exampleExtension = {
+export { Joi };
+
+
+export type ExtendedJoi = Joi.Root & {
+    exampleExtension(): Joi.NumberSchema,
+}
+
+
+export const exampleExtension: Joi.Extension = {
     type: 'test',
     messages: {
         'test.invalid': '{{#label}} must be number',
@@ -13,5 +20,4 @@ export const exampleExtension = {
     },
 };
 
-/** @type {import("./types").ExtendedJoi} */
-export const extended = Joi.extend(exampleExtension);
+export const extended: ExtendedJoi = Joi.extend(exampleExtension);
