@@ -1,0 +1,27 @@
+
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Setup
+        run: |
+          cd ./lib
+          npm ci
+          npm link --userconfig ../.npmrc
+          tsc -p tsconfig.json
+          npm pack
+          cd ../project
+          npm i "../lib/privateprefix-lib-1.0.0.tgz"
+          npm link @privateprefix/lib --userconfig ../.npmrc
+      - name: Test for failure
+        run: cd project && tsc -p tsconfig.json
