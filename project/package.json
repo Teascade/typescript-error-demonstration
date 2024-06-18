@@ -1,0 +1,17 @@
+{
+  "name": "@privateprefix/project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@privateprefix/lib": "file:../lib/privateprefix-lib-1.0.0.tgz"
+  }
+}

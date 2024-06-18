@@ -1,0 +1,15 @@
+{
+  "name": "@privateprefix/lib",
+  "version": "1.0.0",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "joi": "^17.13.1"
+  }
+}
