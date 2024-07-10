@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EXPECTED_TSC_VERSION='Version 5.5.0-beta'
+EXPECTED_TSC_VERSION='Version 5.5.3'
 TSC_VERSION="$(tsc -v)"
 PACK_FILENAME="privateprefix-lib-1.0.0.tgz"
 
